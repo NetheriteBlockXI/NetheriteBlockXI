@@ -32,67 +32,31 @@
             text-align: center;
         }
 
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .link-item {
+        .links, .projects, .about-me, .contact {
             background-color: white;
-            padding: 10px 15px;
+            padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .link-item, .project {
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
             margin: 5px;
             text-align: center;
-            transition: transform 0.3s;
         }
 
-        .link-item:hover {
+        .link-item:hover, .project:hover {
             transform: translateY(-5px);
         }
 
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .project {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            max-width: 300px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-        }
-
-        .project h3 {
-            margin: 0;
-            color: #007BFF;
-        }
-
-        .about-me {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-            text-align: center;
+        .about-me, .contact {
             max-width: 600px;
-        }
-
-        .contact {
-            margin-top: 40px;
-            text-align: center;
         }
 
         a {
@@ -161,13 +125,17 @@
 </div>
 
 <script>
-    // JavaScript to darken background as you scroll
     window.addEventListener('scroll', function () {
         const scrollTop = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         const scrollFraction = scrollTop / maxScroll;
-        const darkness = Math.min(scrollFraction * 0.5, 0.5); // Cap at 50% darker
+        const darkness = Math.min(scrollFraction * 0.5, 0.5);
         document.body.style.backgroundColor = `rgb(${244 - darkness * 244}, ${244 - darkness * 244}, ${244 - darkness * 244})`;
+        
+        const brightness = Math.min(255, 244 + scrollFraction * 30);
+        document.querySelectorAll('.links, .projects, .about-me, .contact, .link-item, .project').forEach(el => {
+            el.style.backgroundColor = `rgb(${brightness}, ${brightness}, ${brightness})`;
+        });
     });
 </script>
 

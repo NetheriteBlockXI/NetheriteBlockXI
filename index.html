@@ -103,11 +103,25 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .discord-icon, .github-icon {
+            width: 64px; /* Adjust to 86px if needed */
+            height: 64px; /* Adjust to 86px if needed */
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .avatar {
+            width: 100px; /* Adjust size as needed */
+            height: auto; /* Keep aspect ratio */
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
 
-<h1>NetheriteBlockXI</h1>
+<img src="img/avatar.png" alt="Avatar" class="avatar">
+<h1>NetheriteBlockXI AKA Zig</h1>
 
 <h2>Links</h2>
 <div class="links">
@@ -157,7 +171,14 @@
 
 <div class="contact">
     <h2>Contact Me</h2>
-    <p>If you'd like to talk, feel free to reach out on <a href="https://github.com/NetheriteBlockXI" target="_blank">GitHub</a> or message me on Discord: <strong>_3xp</strong></p>
+    <p>
+        <img src="img/git.png" alt="GitHub" class="github-icon"> 
+        Contact me on GitHub: <a href="https://github.com/NetheriteBlockXI" target="_blank">GitHub Profile</a>
+    </p>
+    <p>
+        <img src="img/discord.png" alt="Discord" class="discord-icon"> 
+        Contact me on Discord, username being <strong>_3xp</strong>
+    </p>
 </div>
 
 <script>
@@ -170,9 +191,10 @@
 
         const elements = document.querySelectorAll('.link-item, .project, .about-me');
         elements.forEach(element => {
-            const brightness = Math.min(1 + (0.3 * scrollFraction), 1.3);
+            const darkenAmount = Math.min(scrollFraction * 0.4, 0.4);
+            const baseColor = 255 - darkenAmount * 200;
             element.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${0.1 + (0.2 * scrollFraction)})`;
-            element.style.backgroundColor = `rgb(${255 * brightness}, ${255 * brightness}, ${255 * brightness})`;
+            element.style.backgroundColor = `rgb(${baseColor}, ${baseColor}, ${baseColor})`;
         });
     });
 </script>

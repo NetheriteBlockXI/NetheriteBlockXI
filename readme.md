@@ -1,21 +1,18 @@
-About Me
+### About Me
 
-Username: NetheriteBlockXI
+**Username:** NetheriteBlockXI  
+**Interests:** Coding, game development, and creative problem-solving.  
+**Orientation:** Straight  
+**Favorite Game:** *Decaying Winter* - A survival game that captures my attention with its complex mechanics and immersive gameplay.  
 
-Interests: Coding and game development
+#### Fun Facts:
+- I have a strong passion for tackling new coding challenges, always seeking to expand my programming skills and knowledge.
+- My interests lie in survival games, particularly those with intricate mechanics that push the boundaries of gameplay.
 
-Orientation: Straight
+#### Things I Dislike:
+- 🧅 Onions
+- 🍅 Tomatoes
 
-Favorite Game: Decaying Winter
+Feel free to explore my repositories and projects! I'm always open to collaboration or discussions about coding ideas. Don’t hesitate to reach out!
 
-Fun Facts:
-I'm passionate about exploring new coding challenges and expanding my programming skills.
-I have a liking for survival games and complex game mechanics, especially in Decaying Winter.
-
-Things I Dislike:
-🧅 Onions
-🍅 Tomatoes
-
-Feel free to explore my repositories and projects, and don't hesitate to reach out if you'd like to collaborate or discuss coding ideas!
-
-AKA: Zig, 3xp (or _3xp), xenon, void
+**Also Known As:** Zig, 3xp (or _3xp), xenon, void

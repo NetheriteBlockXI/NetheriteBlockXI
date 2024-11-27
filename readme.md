@@ -12,7 +12,13 @@
 #### Things I Dislike:
 - 🧅 Onions
 - 🍅 Tomatoes
+  
+#### Things I Like:
+- Decaying Winter
+- Ultrakill
+- Demise of Eden
+- Industrialist
 
-Feel free to explore my repositories and projects! I'm always open to collaboration or discussions about coding ideas. Don’t hesitate to reach out!
+Feel free to explore my repositories and projects! I'm always open to discussions about coding ideas. Don’t hesitate to reach out!
 
 **Also Known As:** Zig, 3xp (or _3xp), xenon, void

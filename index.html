@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetheriteBlockXI's Portfolio</title>
+    <title>Zig's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -127,7 +127,7 @@
 <body>
 
 <img src="img/avatar.png" alt="Avatar" class="avatar">
-<h1>NetheriteBlockXI AKA Zig</h1>
+<h1>NetheriteBlockXI AKA Zig/3XP</h1>
 
 <h2>Links</h2>
 <div class="links">
@@ -137,7 +137,7 @@
 </div>
 
 <h2>Welcome to My Portfolio</h2>
-<p>I'm a passionate developer who loves creating innovative solutions. Here are some of my projects:</p>
+<p>I'm a developer who loves creating innovative solutions, even if I am not the best. Here are some of my projects:</p>
 
 <div class="projects">
     <div class="project">
@@ -175,6 +175,11 @@
         <p>A new image format.</p>
         <a href="https://xpstu.itch.io/zigp-format" target="_blank">View Project</a>
     </div>
+    <div class="project">
+        <h3>Bits of Code</h3>
+        <p>Bits of code I have made and shared.</p>
+        <a href="https://github.com/NetheriteBlockXI/bits-of-code" target="_blank">View Project</a>
+    </div>
 </div>
 
 <div class="about-me">
@@ -192,8 +197,30 @@
        🧅 Onions<br>
        🍅 Tomatoes
     </p>
-    <p>Feel free to explore my repositories and projects, and don't hesitate to reach out if you'd like to collaborate or discuss coding ideas!</p>
+	<p><strong>Things I Like:</strong><br>
+       Decaying Winter (duh)<br>
+       Ultrakill (alter kill fr)<br>
+	   Demise Of Eden<br>
+	   Industrialist
+    </p>
+    <p>Feel free to explore my repositories and projects, and don't hesitate to reach out if you'd like to discuss coding ideas!</p>
     <p><strong>AKA:</strong> Zig, 3xp (or _3xp), xenon, void</p>
+</div>
+
+<div class="about-me">
+    <h2>Takes</h2>
+    <p><strong>Hot Take:</strong><br>
+        Singleplayer games with well-designed mechanics are more enjoyable than repetitive multiplayer games. Of course, a multiplayer game with well-designed mechanics I will love.
+    </p>
+    <p><strong>On Coding:</strong><br>
+        I like efficient code over clean code. 
+    </p>
+    <p><strong>On Gaming:</strong><br>
+        Microtransactions should never be essential to progression in a game.
+    </p>
+    <p><strong>On Community:</strong><br>
+        Allowing others to user your code allows for faster, cleaner, and better-looking games.
+    </p>
 </div>
 
 <div class="contact">
@@ -218,10 +245,8 @@
 
         const elements = document.querySelectorAll('.link-item, .project, .about-me');
         elements.forEach(element => {
-            const darkenAmount = Math.min(scrollFraction * 0.4, 0.4);
-            const baseColor = 255 - darkenAmount * 200;
-            element.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${0.1 + (0.2 * scrollFraction)})`;
-            element.style.backgroundColor = `rgb(${baseColor}, ${baseColor}, ${baseColor})`;
+            const darkenAmount = Math.min(scrollFraction * 30, 30);
+            element.style.boxShadow = `0px 2px 10px rgba(0, 0, 0, ${0.1 + darkness})`;
         });
     });
 </script>

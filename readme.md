@@ -46,5 +46,4 @@ Feel free to explore my repositories and projects!
 
 # Contact
 
-- **GitHub:** [NetheriteBlockXI](https://github.com/NetheriteBlockXI)
 - **Discord:** `_3xp`

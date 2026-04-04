@@ -6,7 +6,6 @@
   <title>3XP's Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg:          #0e0e0f;
@@ -23,11 +22,8 @@
       --font-mono:   'DM Mono', monospace;
       --font-body:   'Outfit', sans-serif;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -35,15 +31,12 @@
       font-weight: 300;
       line-height: 1.65;
     }
-
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 24px;
     }
-
     section { padding: 64px 0; }
-
     .display {
       font-family: var(--font-display);
       font-size: clamp(3rem, 9vw, 6.5rem);
@@ -51,7 +44,6 @@
       line-height: 0.95;
       color: var(--heading);
     }
-
     .title {
       font-family: var(--font-display);
       font-size: 2rem;
@@ -68,10 +60,8 @@
       height: 1px;
       background: var(--border);
     }
-
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
     #top {
       min-height: 100vh;
       display: flex;
@@ -90,7 +80,6 @@
         radial-gradient(ellipse 40% 60% at 10% 80%, rgba(91,206,250,.05) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .top-avatar {
       width: 80px;
       height: 80px;
@@ -99,7 +88,6 @@
       object-fit: cover;
       margin-bottom: 20px;
     }
-
     .top-aliases {
       font-family: var(--font-mono);
       font-size: 0.8rem;
@@ -108,7 +96,6 @@
       margin-bottom: 12px;
     }
     .top-aliases span { color: var(--accent2); }
-
     #quote-box {
       margin-top: 24px;
       font-family: var(--font-mono);
@@ -120,7 +107,6 @@
       max-width: 500px;
       min-height: 1.2em;
     }
-
     .scroll-hint {
       position: absolute;
       bottom: 28px;
@@ -140,7 +126,6 @@
       height: 40px;
       background: var(--border);
     }
-
     .links-grid {
       display: flex;
       flex-wrap: wrap;
@@ -162,7 +147,6 @@
       transform: translateY(-2px);
       text-decoration: none;
     }
-
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -199,7 +183,6 @@
       color: var(--accent);
       align-self: flex-start;
     }
-
     .info-block {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -221,7 +204,6 @@
     .info-value { font-size: 0.9rem; color: var(--text); }
     .info-value ul { list-style: none; padding: 0; }
     .info-value ul li::before { content: '→ '; color: var(--accent); }
-
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
@@ -243,7 +225,6 @@
       color: var(--accent);
       font-weight: 500;
     }
-
     footer {
       border-top: 1px solid var(--border);
       padding: 28px 0;
@@ -252,13 +233,11 @@
       font-size: 0.72rem;
       color: var(--text-muted);
     }
-
     .divider {
       border: none;
       border-top: 1px solid var(--border);
       margin: 0;
     }
-
     .hidden {
       opacity: 0;
       transform: translateY(18px);
@@ -268,16 +247,74 @@
       opacity: 1;
       transform: none;
     }
+    #rant-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    #rant-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    #rant-title {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    #rant-counter {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    #rant-body {
+      font-size: 0.875rem;
+      line-height: 1.8;
+      color: var(--text);
+      white-space: pre-wrap;
+    }
+    .rant-controls {
+      display: flex;
+      gap: 10px;
+    }
+    .rant-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .rant-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .rant-btn.next {
+      color: var(--accent);
+    }
+    .rant-btn:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-
 <script>
 const CONFIG = {
   name:    "3XP",
   aliases: ["Zig", "John SOF"],
-  avatar:  "img/avatar.png", 
-
+  avatar:  "img/avatar.png",
   quotes: {
     0: "We love the weekend, right guys?",
     1: "Oops, looks like we can't play G/D anymore..",
@@ -287,12 +324,10 @@ const CONFIG = {
     5: "It IS friday! Hop on G/D bro",
     6: "More G/D. Again. Feed me elite slop.",
   },
-
   links: [
     {label: "Old Portfolio", url: "https://3xp1.carrd.co"},
     {label: "itch.io", url: "https://xpstu.itch.io"},
   ],
-
   projects: [
     {
       name: "FastForgeSkript",
@@ -315,7 +350,6 @@ const CONFIG = {
       url:  "https://github.com/NetheriteBlockXI/bits-of-code",
     },
   ],
-
   about: [
     {label: "username", value: "3XP"},
     {label: "interests", value: "Scratch for games, but trying to learn C++."},
@@ -334,16 +368,15 @@ const CONFIG = {
     {
       label: "dislikes",
       list: [
-	  "People that are rude without reason.",
-	  "Various other random (or not) things."
-	  ],
+        "People that are rude without reason.",
+        "Various other random (or not) things."
+      ],
     },
     {
       label: "Fun facts about me:",
       value: "I like survival games and somewhat complex games.",
     },
   ],
-
   takes: [
     {
       label: "cold take",
@@ -366,16 +399,30 @@ const CONFIG = {
       value: "Offensive arguments are useless. General arguments can prove a point.",
     },
   ],
-
+  rants: [
+    {
+      title: "Communities of game devs.",
+      body: "Half of the people who complain about 'bad games' likely haven't even touched any programming language. It is significantly easier to write a 3 paragraph complaint on game's hitboxes.",
+    },
+    {
+      title: "Early access abuse.",
+      body: "Early access games used to be about supporting the developer while they worked on the game, and in turn, you getting to see the progress. Nowadays, it is used for the developer to greed and add even more paid features, while still being unfinished.",
+    },
+	{	
+      title: "Game devs themselves, and examples.",
+      body: "Many developers in todays age tend to ignore the community instead of listening, or alternatively, listen to the community too much. Archeximus (Red), for example, is a good developer in my eyes. Sure, she might not be on social media much, but when they are, she seems to take inspiration. Max, the new Grave/Digger developer, on the other hand, hardly listens to the community. We ask for new content, get none. He nerfs guns that counter his playstyle and shadowbuff guns that fit into his playstyle. I believe he is making the game worse so we play Grave/Digger: Redug. I strive to be like Red and not like Max.",
+    },
+	{	
+      title: "Stop stealing my shock kits",
+      body: "Ok, KGT/PFC, stop stealing my shock kits so I can become Geist and transform into Drapid 2.",
+    },
+  ],
   contact: [
     { platform: "GitHub",  value: "NetheriteBlockXI", url: "https://github.com/NetheriteBlockXI" },
     { platform: "Discord", value: "_3xp", url: null },
   ],
-
 };
-
 </script>
-
 <section id="top">
   <div class="container">
     <img id="top-avatar" class="top-avatar" alt="Avatar">
@@ -385,68 +432,73 @@ const CONFIG = {
   </div>
   <div class="scroll-hint">scroll</div>
 </section>
-
 <hr class="divider">
-
 <section id="links">
   <div class="container">
     <h2 class="title">LINKS</h2>
     <div class="links-grid" id="links-grid"></div>
   </div>
 </section>
-
 <hr class="divider">
-
 <section id="projects">
   <div class="container">
     <h2 class="title">PROJECTS</h2>
     <div class="projects-grid" id="projects-grid"></div>
   </div>
 </section>
-
 <hr class="divider">
-
 <section id="about">
   <div class="container">
     <h2 class="title">ABOUT ME</h2>
     <div class="info-block" id="about-block"></div>
   </div>
 </section>
-
 <hr class="divider">
-
 <section id="takes">
   <div class="container">
     <h2 class="title">TAKES</h2>
     <div class="info-block" id="takes-block"></div>
   </div>
 </section>
-
 <hr class="divider">
-
+<section id="rants">
+  <div class="container">
+    <h2 class="title">RANTS</h2>
+    <div id="rant-viewer">
+      <div id="rant-card">
+        <div id="rant-card-header">
+          <span id="rant-title"></span>
+          <span id="rant-counter"></span>
+        </div>
+        <p id="rant-body"></p>
+      </div>
+      <div class="rant-controls" style="margin-top:16px;">
+        <button class="rant-btn" id="rant-prev">← prev</button>
+        <button class="rant-btn next" id="rant-next">next →</button>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider">
 <section id="contact">
   <div class="container">
     <h2 class="title">CONTACT</h2>
     <div class="contact-grid" id="contact-grid"></div>
   </div>
 </section>
-
 <footer>
   <div class="container">
     built by <span style="color:var(--accent)">3xp</span> · xp studios
   </div>
 </footer>
-
 <script>
   document.getElementById('top-avatar').src = CONFIG.avatar;
   document.getElementById('top-name').textContent = CONFIG.name;
   document.getElementById('top-aliases').innerHTML =
     'aka ' + CONFIG.aliases.map(a => `<span>${a}</span>`).join(' / ');
-
   const day = new Date().getDay();
   const quote = CONFIG.quotes[day] || '';
   if (quote) document.getElementById('quote-box').textContent = `"${quote}"`;
-
   const linksGrid = document.getElementById('links-grid');
   CONFIG.links.forEach(link => {
     const a = document.createElement('a');
@@ -457,7 +509,6 @@ const CONFIG = {
     a.textContent = link.label;
     linksGrid.appendChild(a);
   });
-
   const projectsGrid = document.getElementById('projects-grid');
   CONFIG.projects.forEach(p => {
     projectsGrid.innerHTML += `
@@ -467,7 +518,6 @@ const CONFIG = {
         <a href="${p.url}" target="_blank" rel="noopener noreferrer">view →</a>
       </div>`;
   });
-
   function renderInfoBlock(el, rows) {
     rows.forEach(row => {
       const div = document.createElement('div');
@@ -482,10 +532,8 @@ const CONFIG = {
       el.appendChild(div);
     });
   }
-
   renderInfoBlock(document.getElementById('about-block'), CONFIG.about);
   renderInfoBlock(document.getElementById('takes-block'), CONFIG.takes);
-
   const contactGrid = document.getElementById('contact-grid');
   CONFIG.contact.forEach(c => {
     const el = c.url
@@ -493,11 +541,35 @@ const CONFIG = {
       : `<div class="contact-card"><span class="platform">${c.platform}</span> ${c.value}</div>`;
     contactGrid.innerHTML += el;
   });
-
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.hidden').forEach(el => obs.observe(el));
+
+  let rantIndex = 0;
+  const rantCard = document.getElementById('rant-card');
+  const rantPrev = document.getElementById('rant-prev');
+  const rantNext = document.getElementById('rant-next');
+
+  function renderRant() {
+    const r = CONFIG.rants[rantIndex];
+    rantCard.style.opacity = '0';
+    rantCard.style.transform = 'translateY(6px)';
+    setTimeout(() => {
+      document.getElementById('rant-title').textContent = r.title;
+      document.getElementById('rant-body').textContent = r.body;
+      document.getElementById('rant-counter').textContent = `${rantIndex + 1} / ${CONFIG.rants.length}`;
+      rantPrev.disabled = rantIndex === 0;
+      rantNext.disabled = rantIndex === CONFIG.rants.length - 1;
+      rantCard.style.opacity = '1';
+      rantCard.style.transform = 'none';
+    }, 120);
+  }
+
+  rantPrev.addEventListener('click', () => { if (rantIndex > 0) { rantIndex--; renderRant(); } });
+  rantNext.addEventListener('click', () => { if (rantIndex < CONFIG.rants.length - 1) { rantIndex++; renderRant(); } });
+
+  renderRant();
 </script>
 </body>
 </html>
